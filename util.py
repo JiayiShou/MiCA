@@ -1,4 +1,5 @@
 import os
+import torch
 import matplotlib.pyplot as plt
 import numpy as np
 from torchvision.utils import save_image
@@ -6,7 +7,7 @@ from torchvision.utils import save_image
 
 def save_decoded_image(img, epoch):
     img = img.view(img.size(0), 1, 28, 28)
-    save_image(img, './FashionMNIST_Images/linear_ae_image{}.png'.format(epoch))
+    save_image(img, './FashionMNIST_Images/image{}.png'.format(epoch))
 
 
 class add_gaussian_noise(object):

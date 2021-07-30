@@ -34,6 +34,7 @@ class StackedAutoencoder(nn.Module):
         x = F.relu(self.dec5(x))
         return x
 
+features = 16
 class LinearVAE(nn.Module):
     def __init__(self):
         super(LinearVAE, self).__init__()
@@ -43,6 +44,7 @@ class LinearVAE(nn.Module):
 
         self.dec1 = nn.Linear(in_features=features, out_features=512)
         self.dec2 = nn.Linear(in_features=512, out_features=784)
+        
     def reparameterize(self, mu, log_var):
         """
         :param mu: mean from the encoder's latent space
