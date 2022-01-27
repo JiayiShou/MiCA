@@ -4,7 +4,6 @@ from torch.utils.data import DataLoader
 from PIL import Image
 import numpy as np
 
-#data processes for MiCE
 
 class ThreeCropsTransform:
     """Take two random crops of one image as the query and key."""
